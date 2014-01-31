@@ -1,0 +1,266 @@
+%$Id: macros.tex,v 1.3 2009/07/06 14:57:36 rlw Exp rlw $
+\newcommand{\met}{\thinspace{\text{m}}}\newcommand{\km}{\thinspace{\text{km}}}
+\newcommand{\dy}{\thinspace{\text{d}}} \newcommand{\yr}{\thinspace{\text{yr}}}
+\newcommand{\mm}{\thinspace{\text{mm}}}\newcommand{\mi}{\thinspace{\text{mi}}}
+\newcommand{\s}{\thinspace{\text{s}}}%
+\newcommand{\fm}{\thinspace{\text{fm}}}% "femta meter", same as fermi, 1e-15m
+\newcommand{\xbar}{\overline X}%
+\newcommand{\xbbar}{\overline{\overline X}}%
+%\font\ss=cmss12
+\newcommand{\OFP}{(\Omega,\cF,\P)}
+\newcommand{\bbC}{{\mathbb{C}}}
+\newcommand{\bbF}{{\mathbb{F}}}
+\newcommand{\bbN}{{\mathbb{N}}}
+\newcommand{\bbQ}{{\mathbb{Q}}}
+\newcommand{\bbR}{{\mathbb{R}}}
+\newcommand{\bbX}{{\mathbb{X}}}
+\newcommand{\bbZ}{{\mathbb{Z}}}
+\newcommand{\bx}{{\mathbf{x}}}
+\newcommand{\by}{{\mathbf{y}}}
+\newcommand{\cA}{{\mathcal{A}}}
+\newcommand{\cB}{{\mathcal{B}} }
+\newcommand{\cC}{{\mathcal{C}} }
+\newcommand{\cE}{{\mathcal{E}}}
+\newcommand{\cF}{{\mathcal{F}}}
+\newcommand{\cG}{{\mathcal{G}}}
+\newcommand{\cH}{{\mathcal{H}}}
+\newcommand{\cL}{{\mathcal{L}}}
+\newcommand{\cM}{{\mathcal{M}}}
+\newcommand{\cP}{{\mathcal{P}}}
+\newcommand{\cR}{{\mathcal{R}}}
+\newcommand{\cS}{{\mathcal{S}}}
+\newcommand{\cT}{{\mathcal{T}}}
+\newcommand{\cX}{{\mathcal{X}}}
+\newcommand{\cY}{{\mathcal{Y}}}
+\newcommand{\cZ}{{\mathcal{Z}}}
+\newcommand{\fF}{{\mathfrak F}}
+\newcommand{\fG}{{\mathfrak G}} 
+\newcommand{\fH}{{\mathfrak H}}
+\newcommand{\Eone}{{\ensuremath{\mathrm{E}_1}}}
+\renewcommand{\P}{{\mathsf{P}}} \newcommand{\E}{{\mathsf{E}}}
+\newcommand{\Ev}{{\mathsf{Ev}}}%
+\newcommand{\V}{{\mathsf{V}}}\newcommand{\Cov}{{\mathsf{Cov}}}
+\newcommand{\Be}{\mathsf{Be}}\newcommand{\Bi}{\mathsf{Bi}}
+\newcommand{\Ca}{\mathsf{Ca}}
+\newcommand{\Ex}{\mathsf{Ex}}\newcommand{\Ga}{\mathsf{Ga}}
+\newcommand{\Di}{\mathsf{Di}}\newcommand{\Ge}{\mathsf{Ge}}
+\newcommand{\IG}{\mathsf{IG}}\newcommand{\We}{\mathsf{We}}
+\newcommand{\HG}{\mathsf{HG}}\newcommand{\MN}{\mathsf{MN}}
+\newcommand{\NB}{\mathsf{NB}}\newcommand{\No}{\mathsf{No}}
+\newcommand{\LN}{\mathsf{LN}}\newcommand{\Pa}{\mathsf{Pa}}
+\newcommand{\Po}{\mathsf{Po}}\newcommand{\Un}{\mathsf{Un}}
+\newcommand{\Lv}{\mathsf{Lv}}\newcommand{\St}{\mathsf{St}}
+\newcommand{\StA}{\mathsf{St_{A}}}\newcommand{\StM}{\mathsf{St_{M}}}
+\newcommand{\eps}{\epsilon}\newcommand{\hide}[1]{}
+\newcommand{\argmax}{\mathop{\mathrm{argmax}}}
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}}
+\newcommand{\diag}{\mathop{\mathrm{diag}}}
+\renewcommand{\th}{{\ensuremath^{\mbox{\tiny th}}}}
+\newcommand{\nd}{{\ensuremath^{\mbox{\tiny nd}}}}
+\newcommand{\st}{{\ensuremath^{\mbox{\tiny st}}}}
+\newcommand{\ii}{{\ensuremath{\bar{\i}}}}% \newcommand{\ii}{{\hat i}}
+\newcommand{\jj}{{\ensuremath{\bar{\j}}}}%
+\newcommand{\R}{\texttt{R}}
+\newcommand{\df}{\mathrel{\mathop{:=}}}
+\newcommand{\fd}{\mathrel{\mathop{=:}}}
+\newcommand{\ind}{\mathrel{\mathop{\sim}\limits^{\mathrm{ind}}}}
+\newcommand{\iid}{\mathrel{\mathop{\sim}\limits^{\mathrm{iid}}}}
+\newcommand{\mayeq}{\mathrel{\mathop{=}\limits^?}}
+\newcommand{\HI}{{Hawai\!\`{}\!i}} % okina between the i's
+%\newcommand{\pperp}{\mathrel{{\rlap{$~\perp$}\perp\,\,}}}
+% Donald Arseneau's more sophisticated version:
+\newcommand{\pperp}{\protect\mathpalette{\protect\independenT}{\perp}}
+   \def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern4mu{#1#2}}}
+\newcommand{\nn}{\nonumber} % or \notag
+\newbox\asbox
+\setbox\asbox=\hbox{\vrule height 15pt depth3.5pt width0pt}
+\def\astrut{\relax\ifmmode\copy\strutbox\else\unhcopy\strutbox\fi}
+\def\Strut{\vrule width0pt height 16pt depth 4pt}%
+\newcommand{\yn}{\ensuremath{\mathsf Y~\mathsf N\quad}}
+\newcommand{\TF}{\ensuremath{\mathsf T~\mathsf F\quad}}
+\newcommand{\YN}{\hbox{$\bigcirc$~Yes\quad$\bigcirc$~No}}
+\newcommand{\STRUT}[2]{\vrule width0pt height #1pt depth #2pt}%
+\newdimen\bsigdep
+\def\bSig{{\setbox0\hbox{$\Sigma$}\bsigdep=1\dp0\advance\bsigdep by
+ .2\ht0 \rlap{\kern.3\wd0\vrule height1.2\ht0 depth1\bsigdep}\box0}}%
+\def\Sbar{\bSig}%
+%\newdimen\digitwidth\setbox0=\hbox{{\mathrm0}\digitwidth=\wd0\def\0{\kern\digitwidth}}
+\newcommand{\0}{\phantom{0}}
+\newcommand{\ans}[1]{\hbox to #1truecm{
+    \vrule height 20pt depth3.5pt width0pt
+    \leaders\hrule height-2.5pt depth3pt\hfill}}
+\newcommand{\ansbox}{\rlap{\hspace{-5mm}\framebox[30mm]{\STRUT{10}{5}}}}
+%\font\tinyss=cmss8 at 8truept % for ^T etc
+\newcommand{\tsf}[1]{\mathsf{\scriptscriptstyle{#1}}}
+\newcommand{\STA}{STA\thinspace} \newcommand{\MTH}{MTH\thinspace}
+\newcommand{\fxa}{\mbox{$f(x\mid\alpha)$}}
+\newcommand{\fxp}{\mbox{$f(x\mid p)$}}
+\newcommand{\fxt}{\mbox{$f(x\mid\theta)$}}
+\newcommand{\fxat}{\mbox{$f(x\mid\alpha,\theta)$}}
+\newcommand{\tp}{^{\tsf{T}}}
+\newcommand{\as}{\emph{a.s.}}
+\newcommand{\eg}{\emph{e.g.{}}}%
+\newcommand{\etal}{\emph{et al}}
+\newcommand{\etc}{\emph{etc}}
+\newcommand{\ie}{\emph{i.e.{}}}
+\newcommand{\pg}{\emph{p.}\thinspace}
+\newcommand{\pp}{\emph{pp.}\thinspace}
+%\newcommand{\half}{{\frac12}}
+\newcommand{\half}{{\mathchoice{{\textstyle\frac12}} {{\textstyle\frac12}}
+                {{\scriptscriptstyle\frac12}}{{\scriptscriptstyle\frac12}}}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\bone}[1]{\one_{\{#1\}}}
+\newcommand{\Sec}[1]{Section\thinspace(\ref{#1})}
+\newcommand{\Thm}[1]{Theorem\thinspace\ref{#1}}
+\newcommand{\Cor}[1]{Corollary\thinspace\ref{#1}}
+\newcommand{\Eqn}[1]{Eqn\thinspace(\ref{#1})}
+
+\newcommand{\Eqns}[2]{Eqns\thinspace(\ref{#1},\thinspace\ref{#2})}
+\newcommand{\Eqss}[2]{Eqns\thinspace(\ref{#1}--\ref{#2})}
+\newcommand{\Fig}[1]{Figure\thinspace(\ref{#1})}
+\newcommand{\Figs}[2]{Figures\thinspace(\ref{#1}) and (\ref{#2})}
+\newcommand{\Figab}[2]{Figure\thinspace(\ref{#1}#2)}
+\newcommand{\Tab}[1]{Table\thinspace(\ref{#1})}
+\newcommand{\jth}{{\ensuremath j^{\mbox{\tiny th}}}}%
+\renewcommand{\ij}{_{ij}}
+\providecommand{\ji}{_{ji}}
+\newcommand{\bet}[1]{\left [#1\right ]} % bet [ ]
+\newcommand{\cet}[1]{\left (#1\right )} % cet ( )
+\newcommand{\set}[1]{\left\{#1\right\}} % set { }
+\newcount\ola \newcount\olb \newcount\olc \newcount\old \newcount\ole
+\newcount\och\newcount\level
+%\DeclareMathOperator{\sgn}{sgn} would be better in preamble...
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\newcommand{\supp}{\mathop{\mathrm{supp}}}
+\newtheorem{cor}{Corollary}
+\newtheorem{define}{Definition}
+\newtheorem{lem}{Lemma}
+%\newtheorem{prob}{Problem}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{examp}{Example}
+%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ed}{\emph{ed}}
+\newcommand{\eds}{\emph{eds}}
+\ifx\newcolumntype\undefined
+  \typeout{No Array, no sweat.}
+\else
+  \typeout{Hey, we've got Array!}
+  \newcolumntype{C}{>{$}c<{$}}
+  \newcolumntype{L}{>{$}l<{$}}
+  \newcolumntype{R}{>{$}r<{$}}
+\fi
+\def\OL#1{\par\noindent\hangindent=#1\parindent % Outline
+  \kern1\hangindent\ignorespaces}%
+\def\ol#1{%
+    \level=#1
+    \ifcase\level
+    \ola=0 \olb=0 \olc=0 \old=0 \ole=0\or         % Level 0 (reset)
+    \olb=0 \olc=0 \old=0 \ole=0 \advance\ola by 1 % Level 1
+    \gdef\olev{\uppercase\expandafter{\romannumeral\ola}} \or
+    \olc=0 \old=0 \ole=0 \advance\olb by 1        % Level 2
+    \och=64 \advance\och by\olb
+    \gdef\olev{\char\och}\or
+    \old=0 \ole=0 \advance\olc by 1               % Level 3
+    \och=48 \advance\och by\olc
+    \gdef\olev{\char\och}\or
+    \ole=0 \advance\old by 1                      % Level 4
+    \och=96 \advance\och by\old
+    \gdef\olev{\char\och}\or
+    \advance\ole by 1                             % Level 5
+    \gdef\olev{\romannumeral\ole} \or
+    \message{Outline depth too deep: #1}\fi
+    \ifnum\level>0 \OL\level\llap{\olev.\enspace}\ignorespaces\fi}%
+\long\def\comment#1/*#2*/{\endcomment}%
+\def\endcomment{\relax}%
+\newcounter{probno}\newcounter{partno}[probno]
+\newcommand{\prob}{\par\medskip\goodbreak\stepcounter{probno}\noindent\hbox
+ to25mm {\textbf{Problem \arabic{probno}}.\hfil}}%
+\newcommand{\cont}{\par\vfill\newpage\hbox
+ to35mm {\textbf{Problem \arabic{probno}} (cont).\hfil}}%
+%\newcommand{\newpart}{\par\stepcounter{partno}\alph{partno})\quad}
+\newcommand{\newpart}[1][0]{\ifnum\value{partno}=0\medskip\else\vfill\fi
+  \par\stepcounter{partno}\alph{partno})
+  \ifnum#1=0\quad\else(#1)~\fi}
+%\newcommand{\newpart}[1][0]{\par\stepcounter{partno}\alph{partno})
+%  \ifnum#1=0\quad\else(#1)~\fi}
+%\makeatletter
+%\def\newpart{\@ifnextchar[\@with\@without}
+%\def\@with#1{\vfill\relax\par\stepcounter{partno}\alph {partno} (#1)}
+%\def\@without{\vfill\relax\par\stepcounter{partno}\alph {partno}}
+%\makeatother
+%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{packed_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+%%%%%%%%%%%%%%%%%%%%%
+\makeatletter % Find hours (count1) and minutes (count2) past midnight:
+\count1\time \divide\count1 60 \count2=-\count1
+\multiply\count2 60 \advance\count2 \time
+\edef\now{\two@digits{\the\count1}:\two@digits{\the\count2}}
+%\renewcommand\section{\@startsection     % Smaller and sans-serif
+%    {section}{1}{\z@}{-3.5ex \@plus -1ex \@minus -.2ex}%
+%    {2.3ex \@plus.2ex}{\normalfont\large\bfseries\sffamily}}
+%\renewcommand\subsection{\@startsection
+%    {subsection}{2}{\z@}{-3.25ex\@plus -1ex \@minus -.2ex}%
+%    {1.5ex \@plus .2ex}{\normalfont\large\bfseries\sffamily}}
+%\renewcommand\subsubsection{\@startsection
+%    {subsubsection}{3}{\z@}{-3.25ex\@plus -1ex \@minus -.2ex}%
+%    {1.5ex \@plus .2ex}{\normalfont\normalsize\bfseries\sffamily}}
+%\def\@seccntformat#1{\csname the#1\endcsname.\quad} % Add . to sec num's
+%\long\def\@makecaption#1#2{%                          Use . not : in cap'ns
+%  \vskip\abovecaptionskip
+%  \sbox\@tempboxa{#1. #2}%
+%  \ifdim \wd\@tempboxa >\hsize
+%    #1. #2\par
+%  \else
+%    \global \@minipagefalse
+%    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+%  \fi
+%  \vskip\belowcaptionskip}
+\makeatother
+
+\def\wbox#1#2#3{{\vcenter{\vbox{\hrule height.#3pt
+    \hbox{\vrule width.#3pt height#1pt \kern#2pt \vrule width.#3pt}%
+                            \hrule height.#3pt}}}}%
+\def\Proof.{\medbreak\noindent{\bf Proof.\enspace}}
+\def\qed{\nobreak{\hfill\penalty0\hbox to1truecm{}\nobreak
+    \hfill$\wbox634$\par\bigskip}}%
+
+\ifx\url\undefined
+  \typeout{No url, no sweat.}
+\else
+  \typeout{Hey, we've got url!}
+\makeatletter
+\def\url@rlwstyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}
+    {\def\UrlFont{\small\ttfamily}}}
+\makeatother
+\urlstyle{rlw}
+\fi
+\newif\ifdraft
+\def\DRAFT{\special{! userdict begin /bop-hook{
+  gsave 200 30 translate 65 rotate /Times-Roman
+  findfont 220 scalefont setfont 0 0 moveto 0.95
+  setgray (DRAFT) show grestore }def end}\drafttrue}%
+\newcommand{\uhoh}[1]{\textbf{[Uh oh: #1]}}
+% From tug www.tug.org/TUGboat/tb22-4/tb72wilson.pdf
+\newif\ifsame
+\newcommand{\strcfstr}[2]{%
+  \samefalse
+  \begingroup
+    \def\1{#1}\def\2{#2}%
+    \ifx\1\2\endgroup \sametrue
+    \else \endgroup
+    \fi}
+% Use this with 'jobname' for cond'l compilation for *names* of files
+\def\rev$Revi#1: #2 ${#2}
+\def\dat$Dat#1: #2 #3 ${#2}
+\def\need#1{\vskip0pt plus#1in\penalty-250\vskip0pt plus-#1in}%
+\def\SVNtz$#1 -0#200#3${\global\def\tz{\ifcase#2 GMT\or-1\or-2\or ADT\or
+    EDT\or EST \or CST\or MST\or PST\or AKST\or -10\or HST\else -#2\fi}}
+%=  AST\or CDT \or MDT\or PDT\or AKDT\else -#2\fi}}
+\let\ciao=\endinput
